@@ -23,9 +23,7 @@
         oscillatorNode.connect(biquadFilterNode).connect(gainNode).connect(analyserNode);
         echo(context, gainNode, analyserNode, 0.5, 0.5, 0.5);
         analyserNode.connect(context.destination);
-        const getEndTime = () => {
-            return context.currentTime + 0.004; // interpolation time
-        };
+        const getEndTime = () => context.currentTime + 0.05; // interpolation time
         const canvas = document.querySelector("canvas#stage");
         const rect = canvas.getBoundingClientRect();
         const oscMapping = new Exp(10, 1000);
@@ -41,9 +39,7 @@
             biquadFilterNode.frequency.exponentialRampToValueAtTime(biquadMapping.y(1.0 - ny), endTime);
             point = {x: px, y: py};
         };
-        const mouseMove = event => {
-            handleMouseEvent(event);
-        };
+        const mouseMove = handleMouseEvent;
         const mouseUp = ignore => {
             point = null;
             window.removeEventListener("mousemove", mouseMove);
