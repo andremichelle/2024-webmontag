@@ -3,7 +3,7 @@ import {Random} from "../modules/neutrons.js";
 export const Color = {
     Brownian: frequency => 1.0 / frequency,
     Pink: frequency => 1.0 / Math.sqrt(frequency),
-    White: frequency => 1.0,
+    White: _frequency => 1.0,
     Blue: frequency => Math.sqrt(frequency),
     Violet: frequency => frequency
 };
