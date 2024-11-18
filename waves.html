@@ -160,7 +160,7 @@
             return element;
         };
 
-        boardElement.addEventListener("load", event => {
+        boardElement.addEventListener("load", () => {
             const x = Math.round(boardElement.clientWidth * 0.5);
             const y = Math.round(boardElement.clientHeight * 0.5);
             output = create(Waves.outputElement, x, y);

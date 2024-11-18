@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="styles.css">
     <script type="module">
         import {Policy} from "./modules/policy.js";
-        import {replaceElement, readAudio} from "./modules/standard.js";
-        import {midiToFrequency, setTargetWithin} from "./modules/neutrons.js";
+        import {readAudio, replaceElement} from "./modules/standard.js";
+        import {midiToFrequency} from "./modules/neutrons.js";
         import {Fragmentation, Sequencer} from "./modules/sequencing.js";
         import {CollisionPair, Pulsate} from "./modules/pulsate.js";
         import {echo} from "./modules/effects.js";
@@ -58,7 +58,7 @@
             const pulsate = new Pulsate();
             const sequencer = new Sequencer(() => context.currentTime * 1000.0);
             const stepTime = 1.0 / 256.0;
-            const fragmentation = new Fragmentation((computeStartMillis, stepIndex, position, complete) => {
+            const fragmentation = new Fragmentation((computeStartMillis, stepIndex, position, _complete) => {
                 pulsate.physics.run(stepTime, collision => {
                     if (collision instanceof CollisionPair) {
                         const startTime = computeStartMillis(position + collision.time) / 1000.0;

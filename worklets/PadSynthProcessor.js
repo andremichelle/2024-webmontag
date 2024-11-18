@@ -1,6 +1,6 @@
 import {AbstractPolyphonicSynthProcessor} from "./AbstractPolyphonicSynthProcessor.js";
-import {RenderQuantum, midiToFrequency, hermite, dbToGain, biToUnipolar} from "../modules/neutrons.js";
-import {AdsrEnvelopeSetting, AdsrEnvelopeRunner} from "../modules/envelope.js";
+import {dbToGain, hermite, midiToFrequency, RenderQuantum} from "../modules/neutrons.js";
+import {AdsrEnvelopeRunner, AdsrEnvelopeSetting} from "../modules/envelope.js";
 import {LFORunner, LFOSetting} from "../modules/lfo.js";
 import {clamp} from "../modules/standard.js";
 

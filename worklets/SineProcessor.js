@@ -10,7 +10,7 @@ registerProcessor("sine", class extends AudioWorkletProcessor {
         this.port.onmessage = event => this.frequency = event.data;
     }
 
-    process(inputs, outputs, parameters) {
+    process(inputs, outputs, _parameters) {
         const output = outputs[0];
         const channel = output[0];
         for (let i = 0; i < RenderQuantum; i++) {
