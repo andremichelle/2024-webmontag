@@ -20,7 +20,7 @@ export class Limiter extends AudioWorkletNode {
         if (this.$lookahead === seconds) {
             return
         }
-        this.port.postMessage({ action: "lookahead", value: seconds })
+        this.port.postMessage({action: "lookahead", value: seconds})
         this.$lookahead = seconds
     }
 
@@ -32,7 +32,7 @@ export class Limiter extends AudioWorkletNode {
         if (this.$threshold === db) {
             return
         }
-        this.port.postMessage({ action: "threshold", value: db })
+        this.port.postMessage({action: "threshold", value: db})
         this.$threshold = db
     }
 

@@ -1,5 +1,8 @@
 // WAVE-FORMS //
 import {Module} from "./board.js";
+import {Linear, LinearInt, NoFloat} from "./mapping.js";
+import {ParameterBuilder} from "./parameter.js";
+import {ParameterKnob} from "./editors.js";
 
 export const sine = () => x => Math.sin(x * Math.PI * 2.0);
 export const triangle = () => x => 1.0 - 4.0 * Math.abs(Math.floor(x + 0.25) - (x - 0.25));
@@ -64,10 +67,6 @@ export const trainMirror = (a, b, times) => {
     const r2 = 2.0 * times;
     return x => 0 === (Math.floor(x * r2) + Math.floor(x * 2.0) & 1) ? a(x) : b(x);
 };
-
-import {NoFloat, LinearInt, Linear} from "./mapping.js";
-import {ParameterBuilder} from "./parameter.js";
-import {ParameterKnob} from "./editors.js";
 
 export class Element {
     static create(id, factory, numInputs, numOutputs, parameters) {

@@ -1,16 +1,7 @@
 import {AbstractPolyphonicSynth} from "./AbstractPolyphonicSynth.js";
 import {AdsrEnvelopeFormat} from "../modules/envelope.js";
 import {ParameterBuilder} from "../modules/parameter.js";
-import {
-    Linear,
-    LinearInt,
-    Exp,
-    NoFloat,
-    OneFloat,
-    Level,
-    BipolarPercent,
-    Cents
-} from "../modules/mapping.js";
+import {BipolarPercent, Cents, Exp, Level, Linear, LinearInt, NoFloat, OneFloat} from "../modules/mapping.js";
 import {LFOFormat} from "../modules/lfo.js";
 
 export class Harmonic {

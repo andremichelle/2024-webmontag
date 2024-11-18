@@ -1,5 +1,5 @@
 import {ParameterBuilder} from "../modules/parameter.js";
-import {Level, Exp, OneFloat} from "../modules/mapping.js";
+import {Exp, Level, OneFloat} from "../modules/mapping.js";
 
 export class ClickSetting {
     static beginLevel() {

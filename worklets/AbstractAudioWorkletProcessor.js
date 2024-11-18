@@ -29,7 +29,7 @@ export class AbstractAudioWorkletProcessor extends AudioWorkletProcessor {
                 case "updateParameter": {
                     const parameter = this.parameterMap[value.id];
                     if (undefined === parameter) {
-                        console.warn( value.id, "has not been defined in processor." );
+                        console.warn(value.id, "has not been defined in processor.");
                     }
                     parameter.update(value.value);
                     break;

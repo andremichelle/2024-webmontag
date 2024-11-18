@@ -1,5 +1,5 @@
 import {AbstractAudioWorkletProcessor} from "./AbstractAudioWorkletProcessor.js";
-import {RenderQuantum, dbToGain} from "../modules/neutrons.js";
+import {dbToGain, RenderQuantum} from "../modules/neutrons.js";
 
 registerProcessor("click", class extends AbstractAudioWorkletProcessor {
     constructor(options) {

@@ -1,5 +1,5 @@
 import {ParameterBuilder} from "./parameter.js";
-import {Linear, Percent, LinearInt, PrintMapping, NoFloat, OneFloat} from "./mapping.js";
+import {Linear, LinearInt, NoFloat, OneFloat, Percent, PrintMapping} from "./mapping.js";
 import {Random} from "./neutrons.js";
 
 export class Sequencer {

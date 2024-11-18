@@ -25,6 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   width: auto;
+
   & header {
     height: 32px;
     display: flex;
@@ -34,6 +35,7 @@ body {
     border-radius: 16px;
     padding: 0 20px;
     margin: 0 0 32px 0;
+
     & h1 {
       color: #28E5FF;
       font-size: 36px;
@@ -42,22 +44,26 @@ body {
       padding: 0 16px;
       background-color: black;
     }
+
     & h2 {
       color: black;
       font-size: 20px;
       line-height: 32px;
       padding: 0 16px;
     }
+
     & h1, h2 {
       margin: 0;
       text-transform: uppercase;
       display: inline-block;
     }
   }
+
   & article {
     width: 100%;
     flex: 1;
     position: relative;
+
     &.center {
       display: flex;
       justify-content: center;
@@ -75,6 +81,7 @@ pre {
 
 ul.list {
   margin-top: 64px;
+
   & li {
     color: #FFF;
     font-size: 40px;
@@ -86,9 +93,11 @@ ul.list {
   font-size: 10px;
   user-select: none;
   color: darkgray;
+
   &:hover {
     color: aqua;
   }
+
   &:active {
     color: aqua;
   }
@@ -96,6 +105,7 @@ ul.list {
 
 .tooltip {
   position: relative;
+
   &.text {
     visibility: hidden;
     pointer-events: none;
@@ -152,18 +162,22 @@ button {
   outline: transparent;
   text-transform: uppercase;
   cursor: pointer;
+
   &.toggle {
     color: #28E5FF;
     background-color: #19404d;
+
     &:active {
       color: #19404d;
       background-color: #28E5FF;
     }
+
     &.active {
       color: #19404d;
       background-color: #28E5FF;
     }
   }
+
   &:active {
     color: #28E5FF;
     background-color: #19404d;
@@ -190,6 +204,7 @@ input[type="checkbox"] {
   border-radius: 7px;
   -webkit-appearance: none;
   outline: none;
+
   & + label {
     color: #28E5FF;
     font-size: 10px;
@@ -198,9 +213,11 @@ input[type="checkbox"] {
     position: relative;
     font-weight: bold;
   }
+
   &:checked {
     background-color: #28E5FF;
   }
+
   &:not(:first-child) {
     margin-left: 16px;
   }
@@ -218,6 +235,7 @@ input[type="radio"] {
   padding: 0;
   outline: none;
   user-select: none;
+
   & + label {
     text-rendering: geometricPrecision;
     color: #28E5FF;
@@ -233,13 +251,16 @@ input[type="radio"] {
     cursor: pointer;
     font-size: 10px;
     height: 18px;
+
     &:first-of-type {
       border-radius: 9px 1px 1px 9px;
     }
+
     &:last-of-type {
       border-radius: 1px 9px 9px 1px;
     }
   }
+
   &:checked {
     & + label {
       color: #19404d;
@@ -334,6 +355,7 @@ h5 {
   position: relative;
   cursor: pointer;
   color: white;
+
   &::after {
     font-size: 16px;
     font-weight: bold;
@@ -343,34 +365,44 @@ h5 {
     transform: translate(-50%, -50%);
     white-space: nowrap;
   }
+
   &.idle {
     &::after {
       content: "START";
     }
+
     background-color: #FF3333;
   }
+
   &.creating {
     &::after {
       content: "STOP";
     }
+
     background-color: #FF3333;
   }
+
   &.waiting {
     &::after {
       content: "WAITING";
     }
+
     background-color: #FF9933;
   }
+
   &.recording {
     &::after {
       content: "RECORDING";
     }
+
     background-color: #FF3333;
   }
+
   &.new-track {
     &::after {
       content: "NEW TRACK";
     }
+
     background-color: #FF3333;
   }
 }
@@ -378,6 +410,7 @@ h5 {
 ul {
   font-size: 14px;
   color: gray;
+
   li {
     &.default {
       color: white;

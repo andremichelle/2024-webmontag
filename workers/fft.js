@@ -4,10 +4,9 @@ let fft = null;
 
 onmessage = event => {
     const data = event.data;
-    if (typeof(data) === 'number') {
+    if (typeof (data) === 'number') {
         fft = new FFT(data);
-    }
-    else if (typeof(data) === 'object') {
+    } else if (typeof (data) === 'object') {
         if (null === fft) {
             throw new Error("FFT size not set");
         }

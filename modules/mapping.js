@@ -1,4 +1,4 @@
-import { clamp } from "./standard.js"
+import {clamp} from "./standard.js"
 
 export class Linear {
     constructor(min, max) {
@@ -15,7 +15,7 @@ export class Linear {
     }
 
     serialise() {
-        return { type: "linear", min: this.min, max: this.max }
+        return {type: "linear", min: this.min, max: this.max}
     }
 }
 
@@ -39,7 +39,7 @@ export class LinearInt {
     }
 
     serialise() {
-        return { type: "linear-int", min: this.min, max: this.max }
+        return {type: "linear-int", min: this.min, max: this.max}
     }
 }
 
@@ -58,7 +58,7 @@ export class Exp {
     }
 
     serialise() {
-        return { type: "exp", min: this.min, max: this.max }
+        return {type: "exp", min: this.min, max: this.max}
     }
 }
 
@@ -72,7 +72,7 @@ export class Bool {
     }
 
     serialise() {
-        return { type: "bool" }
+        return {type: "bool"}
     }
 }
 

@@ -1,6 +1,6 @@
-import {Bool, Linear, LinearInt, Exp, NoFloat, PrintMapping} from "./mapping.js";
+import {Bool, Exp, LinearInt, PrintMapping} from "./mapping.js";
 import {ParameterBuilder} from "./parameter.js";
-import {RenderQuantum, PI_2, Random} from "./neutrons.js";
+import {PI_2, Random, RenderQuantum} from "./neutrons.js";
 
 export class LFOFormat {
     constructor(sampleRate, onChange) {
@@ -115,7 +115,7 @@ export class LFORunner {
             this.phase = time / setting.period + setting.phase;
             this.phase -= Math.floor(this.phase);
         }
-        this.random.seed = (time * 0xFFFFFF)|0;
+        this.random.seed = (time * 0xFFFFFF) | 0;
     }
 
     process(buffer, rateMod, rateModAmount) {

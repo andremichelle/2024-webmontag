@@ -1,5 +1,5 @@
 import {deserialiseMapping} from "../modules/mapping.js";
-import {RenderQuantum, ExpCurveAlgorithm} from "../modules/neutrons.js";
+import {ExpCurveAlgorithm, RenderQuantum} from "../modules/neutrons.js";
 
 registerProcessor("ExpCurve", class extends AudioWorkletProcessor {
     constructor() {

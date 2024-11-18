@@ -176,11 +176,9 @@ export class PlotterRange {
         if (0.0 < scale) {
             if (s < 0.0) {
                 this.set(0.0, range * Math.pow(2.0, scale));
-            }
-            else if (e > 1.0) {
+            } else if (e > 1.0) {
                 this.set(1.0 - range * Math.pow(2.0, scale), 1.0);
-            }
-            else {
+            } else {
                 this.set(s, e);
             }
         } else if (e - s < this.$minimum) {

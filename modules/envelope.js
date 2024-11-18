@@ -1,5 +1,5 @@
 import {ExpCurveAlgorithm} from "./neutrons.js";
-import {Bool, Linear, Exp, OneFloat, PrintMapping} from "./mapping.js";
+import {Bool, Exp, Linear, OneFloat, PrintMapping} from "./mapping.js";
 import {ParameterBuilder} from "./parameter.js";
 
 export class AdsrEnvelopeFormat { // editor format

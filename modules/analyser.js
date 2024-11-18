@@ -1,5 +1,5 @@
 import {ArrayPlotter} from "./plotter.js";
-import {Linear, Exp} from "./mapping.js";
+import {Exp, Linear} from "./mapping.js";
 
 export class Analyser {
     constructor(context, spectrumMode) {
@@ -42,7 +42,8 @@ export class Analyser {
         this.spectrumMode = spectrumMode;
         this.$headerText = "SPECTRUM";
 
-        this.overlayCallback = (canvas, graphics) => {};
+        this.overlayCallback = (canvas, graphics) => {
+        };
 
         this.start();
     }

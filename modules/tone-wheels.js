@@ -42,12 +42,10 @@ export class Wheel {
                     if (rel >= p0 && rel < p1) {
                         callback(this, particle, rel - p0, dx / this.radius);
                     }
-                }
-                else {
+                } else {
                     if (rel >= p0 && rel < 1.0) {
                         callback(this, particle, rel - p0, dx / this.radius);
-                    }
-                    else if (rel >= 0.0 && rel < p1) {
+                    } else if (rel >= 0.0 && rel < p1) {
                         callback(this, particle, 1.0 - p0 + rel, dx / this.radius);
                     }
                 }

@@ -232,8 +232,7 @@ export class ExpCurveAlgorithm {
             this.multiplier = 1;
             this.delta = this.dy / x2;
             this.branch = 2 | 0;
-        }
-        else {
+        } else {
             const onemb = 1 - bend;
             const onembs = onemb * onemb;
             const onem2b = 1 - bend - bend;

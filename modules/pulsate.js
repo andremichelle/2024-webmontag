@@ -82,8 +82,7 @@ export class Physics {
             if (null != observer) {
                 if (collision === this.collisionSelf) {
                     observer(this.collisionSelf);
-                }
-                else if (collision === this.collisionPair) {
+                } else if (collision === this.collisionPair) {
                     observer(this.collisionPair);
                 }
             }
@@ -180,8 +179,7 @@ export class CollisionPair extends Collision {
                 this.circleB = b;
                 return true;
             }
-        }
-        else if (0.0 <= dt1 && dt1 < max) {
+        } else if (0.0 <= dt1 && dt1 < max) {
             if (0.0 <= vr1 - vr0) {
                 this.time = dt1;
                 this.type = 0;
@@ -189,8 +187,7 @@ export class CollisionPair extends Collision {
                 this.circleB = b;
                 return true;
             }
-        }
-        else if (0.0 <= dt2 && dt2 < max) {
+        } else if (0.0 <= dt2 && dt2 < max) {
             if (0.0 <= vr0 - vr1) {
                 this.time = dt2;
                 this.type = 0;
@@ -198,8 +195,7 @@ export class CollisionPair extends Collision {
                 this.circleB = b;
                 return true;
             }
-        }
-        else if (0.0 <= dt3 && dt3 < max) {
+        } else if (0.0 <= dt3 && dt3 < max) {
             if (0.0 <= vr1 + vr0) {
                 this.time = dt3;
                 this.type = 1;
@@ -220,8 +216,7 @@ export class CollisionPair extends Collision {
         if (0 === this.type) {
             this.circleA.radiusVelocity = bv;
             this.circleB.radiusVelocity = av;
-        }
-        else if (1 === this.type) {
+        } else if (1 === this.type) {
             this.circleA.radiusVelocity = -bv;
             this.circleB.radiusVelocity = -av;
         }
